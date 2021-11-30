@@ -2,6 +2,7 @@ package com.raven.main;
 
 import com.raven.event.MenuEvent;
 import com.raven.form.Form;
+import com.raven.form.FormHome;
 import java.awt.Color;
 import java.awt.Component;
 
@@ -14,14 +15,14 @@ public class Main extends javax.swing.JFrame {
             @Override
             public void menuSelected(int index) {
                 if (index == 0) {
-
+                    showForm(new FormHome());
                 } else {
                     showForm(new Form(index + ""));
                 }
             }
         };
         menu.initMenu(event);
-        menu.setSelected(1);
+        menu.setSelected(0);
     }
 
     private void showForm(Component com) {
